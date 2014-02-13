@@ -1,0 +1,26 @@
+[{
+    "title": "All",
+    "difficulty": "all",
+    "label": "default",
+    "index": 0
+},{
+    "title": "Easy",
+    "difficulty": "easy",
+    "label": "success",
+    "index": 1
+},{
+    "title": "Intermediate",
+    "difficulty": "intermediate",
+    "label": "primary",
+    "index": 2
+},{
+    "title": "Difficult",
+    "difficulty": "difficult",
+    "label": "warning",
+    "index": 3
+},{
+    "title": "Hard",
+    "difficulty": "hard",
+    "label": "danger",
+    "index": 4
+}]

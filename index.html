@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <style>
+        .hidden{
+            display: none;
+        }
+
+        body {
+            padding-top: 70px;
+        }
+
+        .posts .post { display: none; }
+        .posts.all .post { display: table-row; }
+
+        .posts.easy .post { display: none; }
+        .posts.easy .easy { display: table-row; }
+
+        .posts.intermediate .post { display: none; }
+        .posts.intermediate .intermediate { display: table-row; }
+
+        .posts.difficult .post { display: none; }
+        .posts.difficult .difficult { display: table-row; }
+
+        .posts.hard .post { display: none; }
+        .posts.hard .hard { display: table-row; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">/r/dailyprogrammer</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="btn-group-vertical" id="filterList"></div>
+            </div>
+            <div class="col-md-10">
+                <table class="table table-hover posts">
+                    <thead>
+                        <tr><th>Difficulty</th><th>Title</th></tr>
+                    </thead>
+                    <tbody id="postList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script id="postTemplate" type="text/underscore-template">
+        <td><span class="label label-<%= label %>"><%= difficulty %></span></td>
+        <td><a href="<%= url %>" target="_blank"><%= title %></a></td>
+    </script>
+    <script id="filterTemplate" type="text/underscore-template">
+        <%= title %>
+    </script>
+
+
+    <script src="js/lib/zepto.js"></script>
+    <script src="js/lib/lodash.js"></script>
+    <script src="js/lib/backbone.js"></script>
+
+    <script src="js/_bootstrap.js"></script>
+    <script src="js/models/Post.js"></script>
+    <script src="js/models/Filter.js"></script>
+    <script src="js/collections/Post.js"></script>
+    <script src="js/collections/Filter.js"></script>
+    <script src="js/views/Post.js"></script>
+    <script src="js/views/Filter.js"></script>
+    <script src="js/views/FilterList.js"></script>
+    <script src="js/views/Index.js"></script>
+    <script src="js/routers/Router.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
