@@ -4,7 +4,7 @@
 
     app.collections.Post = Backbone.Collection.extend({
         model: app.models.Post,
-        url: "/posts.json",
+        url: "posts.json",
         comparator: "number",
         sync: function(method, model, opts) {
             if(method !== "read") {

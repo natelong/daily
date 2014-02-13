@@ -4,7 +4,7 @@
 
     app.collections.Filter = Backbone.Collection.extend({
         model: app.models.Filter,
-        url: "/filters.json",
+        url: "filters.json",
         comparator: "index",
         sync: function(method, model, opts) {
             if(method !== "read") {
